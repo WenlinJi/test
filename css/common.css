@@ -1,0 +1,130 @@
+/* 该网站中多个网页相同模块的重复样式，如：头部、底部 */
+
+/* =============================================== */
+body{
+    background-image: url(../images/base-\ \(2\).jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    /* background: linear-gradient(to bottom, #D5DEE7 0%, #E8EBF2 50%, #E2E7ED 100%), linear-gradient(to bottom, rgba(0,0,0,0.02) 50%, rgba(255,255,255,0.02) 61%, rgba(0,0,0,0.02) 73%), linear-gradient(33deg, rgba(255,255,255,0.20) 0%, rgba(0,0,0,0.20) 100%);
+    background-blend-mode: normal,color-burn; */
+    /* background-image: linear-gradient(to top, #accbee 0%, #e7f0fd 100%); */
+}
+
+/* #app{
+    width: 2560px;
+    margin: 0 auto;
+} */
+/* 通用版心 */
+.wrapper{
+    width: 1280px;
+    /* 版心居中显示 */
+    margin: 0 auto;
+}
+
+/* =============================================== */
+/* 快捷导航 —— 通栏的盒子里面套版心 ,
+而header部分可以直接选择继承wrapper的属性,不需要包含在wrapper盒子里*/
+.shortcut{
+    /* 通栏的盒子不给宽度，就和浏览器一样宽 */
+    height: 52px;
+    /* 让页面在缩小时,两个侧边,即除了版心部分的两边背景是#333 */
+    background-color:  rgba(205, 220, 220,0.4);
+    
+}
+
+/* 快捷导航的版心 */
+.shortcut .wrapper{
+    padding-left: 100px;
+    padding-right: 100px;
+    height: 52px;
+    background-color:  rgba(205, 220, 220,0.4);
+    /* 自加的：让放大之后的尾部文字背景也能是#333 */
+    /* background-image: linear-gradient(120deg, #fdfbfb 0%, #ebedee 100%); */
+    /* position: relative; */
+}
+
+/* LOGO */
+.shortcut .wrapper .logo{
+    height: 52px;
+    width: 68px;
+    float: left;
+}
+
+/* logo搜索引擎优化 */
+.shortcut .wrapper .logo h1{
+    width: 100%;
+    height: 100%;
+}
+.shortcut .wrapper .logo h1 a{
+    /* a是行内标签,设置宽高需要把他变为块状元素 */
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-image: url(../images/base-3.png);
+    /* 让 logo 图片能够大小合适的显示在框内 */
+    background-size: contain;
+    /* 将 h1 标签里的字 "JI" 隐藏 */
+    font-size: 0;
+}
+.shortcut .wrapper ul{
+    /* 实现七个Li靠右显示，但是是竖着的 */
+    float: right;
+    /* position: absolute; */
+}
+
+.shortcut .wrapper li{
+    /* 实现li横向排列 */
+    float: left;
+    /* li垂直居中 */
+    line-height: 52px;  
+}
+
+.shortcut .wrapper li a{
+    /* 根据图纸测量 */
+    padding: 0 16px;
+    border-right: 1px solid #5c8a8a;
+    font-size: 14px;
+    color:#5c8a8a;
+}
+
+.shortcut .wrapper a:hover{
+    /* 根据图纸测量 */
+    color:   #ff9900;
+}
+
+
+
+/* =============================================== */
+/* 主体部分 */
+
+
+/* =============================================== */
+/* 版权部分 */
+.footer{
+    height: 200px;
+    background-color: #CDDCDC;
+    background-image: radial-gradient(at 50% 100%, rgba(255,255,255,0.50) 0%, rgba(0,0,0,0.50) 100%), linear-gradient(to bottom, rgba(255,255,255,0.25) 0%, rgba(0,0,0,0.25) 100%);
+    background-blend-mode: screen, overlay;
+    opacity: 0.6;
+}
+.footer .wrapper{
+    height: 200px;
+    background-color:  rgba(205, 220, 220,0.4);
+}
+.footer .bottom{
+    padding-top: 40px;
+    text-align: center;
+    padding-top: 68px;
+}
+.footer .bottom p{
+	font-family: PingFangSC-Light;
+    font-size: 14px;
+	color: #476b6b;
+    margin-bottom: 20px;
+}
+.footer .bottom a{
+	font-family: PingFangSC-Light;
+    font-size: 14px;
+	color: #3d5c5c;
+}

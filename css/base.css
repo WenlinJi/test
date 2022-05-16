@@ -1,0 +1,138 @@
+/* 基础公共样式 */
+/* 去除常见标签默认的 margin 和 padding */
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+p,
+ul,
+ol,
+li,
+dl,
+dt,
+dd,
+input{
+    margin: 0;
+    padding: 0;
+}
+
+/* 内减模式 */
+*{
+    box-sizing: border-box;
+}
+
+/* 设置网页统一的字体大小，行高，字体系列和相关属性 */
+body {
+    /* CSS3 抗锯齿性 让文字显示的更加清晰 */
+	-webkit-font-smoothing: antialiased;
+	background-color: #fff;
+    /* body文字大小都是16px,1.5倍行高 */
+    /* \5B8B\4F53  这是宋体的意思 */
+	font: 16px/1.5 Microsoft YaHei,Heiti SC,tahoma,
+        arial,Hiragino Sans GB,"\5B8B\4F53",sans-serif;
+		color:	 #3d5c5c
+
+}
+/* 去除默认的倾斜样式 —— em 和 i 的斜体变为正常字体 */
+em,
+i {
+	font-style: normal;
+}
+
+/* 去掉列表默认样式 —— 即li前面的小圆点 */
+ul,
+ol {
+	list-style: none;
+}
+
+/* 去除 a标签默认的下划线，并设置默认文字颜色 */
+a {
+    /* 让链接改变颜色 */
+	color: #3d5c5c;
+    /* 取消链接的下划线 */
+	text-decoration: none;
+}
+
+/* 设置img垂直对齐方式为居中对齐，去除Img默认的下间隙 */
+img {
+    /* border: 0; 照顾低版本浏览器，如果 图片外面包含了链接会有边框的问题 */
+	border: 0;
+    /* 解决图片底侧有空白缝隙的问题，让行内块和文字垂直居中显示 */
+	vertical-align: middle;
+}
+
+/* 去除input默认样式 —— 取消表单轮廓outlin */
+input{
+    border: none;
+    outline: none;
+    color: #3d5c5c;
+}
+
+
+/* 当我们鼠标经过button 按钮的时候，鼠标自动变成小手 */
+button {
+	cursor: pointer;
+}
+
+textarea{
+    /* 取消拖拽文本域 */
+    resize: none;
+    /* 取消表单轮廓 */
+    outline: none;
+}
+
+/* ============================================================== */
+/* 左浮动添加fl即可 */
+.fl{
+    float: left;
+}
+/* 右浮动添加fr即可 */
+.fr{
+    float: right;
+}
+
+.hide,
+.none {
+    /* 给标签带上这种class，会使元素隐藏 */
+	display: none;
+}
+
+/* 双伪元素清除浮动 */
+.clearfix::before,
+.clearfix::after {
+	content: "";
+	display: table;
+}
+.clearfix::after{
+    clear: both;
+}
+
+/* =================================================== */
+/* .clearfix::after 伪元素清除浮动 */
+/* .clearfix::after {
+	visibility: hidden;
+	clear: both;
+	display: block;
+	content: ".";
+	height: 0
+} */
+
+/* 清除浮动，为了兼容IE6，7 */
+/* .clearfix {
+	*zoom: 1
+} */
+
+/* =================================================== */
+/* 京东默认的样式 */
+/* 经过链接就变成红色字体 */
+/* a:hover {
+	color: #3d5c5c;
+}
+
+button,input {
+	font-family: Microsoft YaHei,Heiti SC,tahoma,arial,Hiragino Sans GB,"\5B8B\4F53",sans-serif
+} */
+
+
